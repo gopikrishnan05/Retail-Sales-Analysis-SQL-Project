@@ -1,52 +1,89 @@
-# Retail-Sales-Analysis-SQL-Project
-This project is designed to demonstrate SQL skills and techniques typically used by data analysts to explore, clean, and analyze retail sales data. The project involves setting up a retail sales database, performing exploratory data analysis (EDA), and answering specific business questions through SQL queries.
+# 🛒 Retail Sales Data Analysis using SQL
+📌 Project Overview
 
-# Objectives
-1. Set up a retail sales database: Create and populate a retail sales database with the provided sales data.
-2. Data Cleaning: Identify and remove any records with missing or null values.
-3. Exploratory Data Analysis (EDA): Perform basic exploratory data analysis to understand the dataset.
-4. Business Analysis: Use SQL to answer specific business questions and derive insights from the sales data.
+This project demonstrates end-to-end SQL analysis on a retail sales dataset. It covers database creation, data cleaning, exploratory data analysis (EDA), and business-driven insights using SQL queries.
 
-# Project Structure
-# 1. Database Setup
-Database Creation: The project starts by creating a database named p1_retail_db.
-Table Creation: A table named retail_sales is created to store the sales data. The table structure includes columns for transaction ID, sale date, sale time, customer ID, gender, age, product category, quantity sold, price per unit, cost of goods sold (COGS), and total sale amount.
+The goal of this project is to simulate real-world data analyst tasks and derive meaningful business insights from retail sales data.
 
-CREATE DATABASE p1_retail_db;
+# 🎯 Objectives
 
-CREATE TABLE retail_sales
-(
-    transactions_id INT PRIMARY KEY,
-    sale_date DATE,	
-    sale_time TIME,
-    customer_id INT,	
-    gender VARCHAR(10),
-    age INT,
-    category VARCHAR(35),
-    quantity INT,
-    price_per_unit FLOAT,	
-    cogs FLOAT,
-    total_sale FLOAT
-);
+✅ Set up a retail sales database
 
-# 2.Data Exploration & Cleaning
-1.Record Count: Determine the total number of records in the dataset.
-2.Customer Count: Find out how many unique customers are in the dataset.
-3. Category Count: Identify all unique product categories in the dataset.
-4. Null Value Check: Check for any null values in the dataset and delete records with missing data.
+✅ Perform data cleaning by handling missing values
 
-SELECT COUNT(*) FROM retail_sales;
-SELECT COUNT(DISTINCT customer_id) FROM retail_sales;
-SELECT DISTINCT category FROM retail_sales;
+✅ Conduct exploratory data analysis (EDA)
 
-SELECT * FROM retail_sales
-WHERE 
-    sale_date IS NULL OR sale_time IS NULL OR customer_id IS NULL OR 
-    gender IS NULL OR age IS NULL OR category IS NULL OR 
-    quantity IS NULL OR price_per_unit IS NULL OR cogs IS NULL;
+✅ Solve business problems using SQL queries
 
-DELETE FROM retail_sales
-WHERE 
-    sale_date IS NULL OR sale_time IS NULL OR customer_id IS NULL OR 
-    gender IS NULL OR age IS NULL OR category IS NULL OR 
-    quantity IS NULL OR price_per_unit IS NULL OR cogs IS NULL;
+✅ Generate insights to support business decisions
+
+# 🗂️ Project Structure
+# 1️⃣ Database Setup
+🔹 Database Creation
+🔹 Table Creation
+
+# 🧹 Data Exploration & Cleaning
+🔹 Total Records
+🔹 Unique Customers
+🔹 Unique Categories
+🔹 Null Value Check
+🔹 Remove Null Records
+
+# 📊 Business Analysis & SQL Queries
+1️⃣ Sales on a Specific Date
+2️⃣ Clothing Transactions (Nov 2022, Quantity ≥ 4)
+3️⃣ Total Sales by Category
+4️⃣ Average Age (Beauty Category)
+5️⃣ High-Value Transactions (>1000)
+6️⃣ Transactions by Gender & Category
+7️⃣ Best Selling Month in Each Year
+8️⃣ Top 5 Customers by Total Sales
+9️⃣ Unique Customers per Category
+🔟 Sales by Shift (Morning, Afternoon, Evening)
+
+
+
+# 🔎 Key Findings
+# 📌 Customer Demographics
+Customers belong to various age groups, with purchases distributed across categories like Clothing and Beauty.
+
+# 💰 High-Value Transactions
+Multiple transactions exceeded ₹1000, indicating premium purchases and high-value customers.
+
+# 📈 Sales Trends
+Monthly analysis helped identify peak-performing months and seasonal sales patterns.
+
+# 🏆 Customer Insights
+Identified top 5 highest-spending customers
+
+Measured category-wise customer engagement
+
+Analyzed purchasing behavior by gender
+
+# 📑 Reports Generated
+Sales Summary Report – Total revenue, order count, and category performance
+
+Trend Analysis Report – Monthly and shift-based sales trends
+
+Customer Insights Report – Top customers and category-level unique customers
+
+# 🚀 Conclusion
+This project demonstrates practical SQL skills required for a Data Analyst role, including:
+
+Database design
+
+Data cleaning
+
+Aggregations and grouping
+
+Window functions
+
+Business-driven data analysis
+
+The insights generated from this analysis can help businesses understand customer behavior, identify peak sales periods, and optimize product strategies.
+
+
+
+
+
+
